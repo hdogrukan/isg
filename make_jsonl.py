@@ -38,7 +38,7 @@ with open("isg_train.jsonl", "w", encoding="utf-8") as fp:
                                 "type": "image_url",
                                 "image_url": {
                                     "url": image_url,
-                                    "detail": "medium"
+                                    "detail": "low"
                                 }
                             }
                         ]
