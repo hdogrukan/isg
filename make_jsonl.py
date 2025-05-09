@@ -19,7 +19,7 @@ with open("isg_train.jsonl", "w", encoding="utf-8") as fp:
 
             # Görsel URL’si
             image_url = f"{RAW_BASE_URL}/{class_name}/{image_file}"
-
+            ground_truth = class_name.replace("_", " ")
             # JSONL mesaj yapısı
             example = {
                 "messages": [
@@ -45,7 +45,7 @@ with open("isg_train.jsonl", "w", encoding="utf-8") as fp:
                     },
                     {
                         "role": "assistant",
-                        "content": class_name
+                        "content": ground_truth
                     }
                 ]
             }
